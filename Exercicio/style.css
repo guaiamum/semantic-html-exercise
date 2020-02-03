@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+    --header_blue: rgba(0, 174, 255, 0.8);
+    --green: rgb(46, 204, 113);
+    --purple: rgb(156, 136, 255);
+    --purple_hover: rgb(133, 110, 250);
+    --red: rgb(192, 57, 43);
+    --grey: rgba(61, 61, 61, 0.8);
+    --grey_division: rgba(61, 61, 61, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: var(--header_blue);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    letter-spacing: 10px;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 2;
+    margin-top: 100px;
+}
+
+#balance {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#money {
+    font-size: 26px;
+}
+
+#income_expense {
+    background-color: white;
+    margin-top: 10px;
+    box-shadow: 3px 3px 5px 2px #ccc;
+    position: sticky;
+    top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#income_expense div {
+    width: 140px;
+    height: 44px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#income_expense div:first-of-type {
+    border-right: 1px solid var(--grey_division);
+}
+
+#income {
+    color: var(--green);
+}
+
+#expense {
+    color: var(--red);
+}
+
+.underlined_h2 {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--grey);
+}
+
+#transaction_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#transaction_form * {
+    margin-top: 10px;
+}
+
+.form_text {
+    height: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#amount_select {
+    width: 110px;
+    height: 30px;
+}
+
+#add_transaction {
+    background-color: var(--purple);
+    color: white;
+    height: 30px;
+    font-size: 14px;
+}
+
+#add_transaction:hover {
+    background-color: var(--purple_hover);
+}
+
+footer {
+    background-color: var(--grey);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+#img {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 450px){
+    header {
+        height: 50px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    footer {
+        height: 50px;
+    }
+}

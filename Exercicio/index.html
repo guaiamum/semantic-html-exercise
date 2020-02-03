@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+
+        <main>
+            <h2 id="balance">Your Balance</h2>
+            <h3 id="money">$0.00</h3>
+            
+            <div id="income_expense">
+                <div>
+                    <h4>Income</h4>
+                    <p id="income">$0.00</p>
+                </div>
+                <div>
+                    <h4>Expense</h4>
+                    <p id="expense">$0.00</p>
+                </div>
+            </div>
+
+            <h2 class="underlined_h2">History</h2>
+
+            <h2 class="underlined_h2">Add new transaction</h2>
+
+            <form id="transaction_form">
+                <label>Text</label>
+                <input type="text" class="form_text" placeholder="Enter text..." pattern="[A-Za-z]" required />
+
+                <label>Amount</label>
+                <div id="amount_part">
+                    <select name="account" id="amount_select">
+                        <option value="type" disabled>--Type--</option>
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <input type="number" class="form_text" placeholder="Enter amount..." required />
+                </div>
+
+                <input type="submit" id="add_transaction" value="Add transaction">
+            </form>
+        </main>
+
+        <footer>
+            Made with love :)
+            <img src="./icon.png" id="img"/>
+        </footer>
+    </div>
+</body>
+</html>
